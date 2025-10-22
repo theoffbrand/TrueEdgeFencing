@@ -41,7 +41,8 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 
 /* HERO */
 .hero {
- background: url("https://theoffbrand.github.io/TrueEdgeFencing/hero_chainlink.jpg") no-repeat center center;
+ .hero {
+  background: url("https://theoffbrand.github.io/TrueEdgeFencing/hero_chainlink.jpg") no-repeat center center;
   background-size: cover;
   height: 90vh;
   width: 100%;
