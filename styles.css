@@ -41,7 +41,7 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 
 /* HERO */
 .hero {
-  background-image: url('hero_chainlink.jpg');
+  background-color: red;  background-image: url('hero_chainlink.jpg');
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
