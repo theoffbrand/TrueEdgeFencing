@@ -1,0 +1,264 @@
+
+html { scroll-behavior: smooth; }
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  color: #fff;
+  background-color: #111;
+  overflow-x: hidden;
+}
+
+/* NAVIGATION */
+header {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%;
+  background: rgba(0,0,0,0.7);
+  backdrop-filter: blur(5px);
+  display: flex; justify-content: space-between; align-items: center;
+  padding: 1rem 2rem;
+  z-index: 1000;
+}
+header h1 { font-size: 1.8rem; font-weight: 700; }
+header h1 span { color: #1e5631; }
+nav { display: flex; align-items: center; gap: 1.5rem; }
+
+/* CONTACT US BUTTON */
+.contact-btn {
+  background-color: #1e5631;
+  color: #fff;
+  border: none;
+  padding: 0.75rem 1.5rem;
+  border-radius: 4px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+.contact-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 0 10px #3dbf65;
+}
+
+/* HERO */
+.hero {
+  background: url('images/hero_chainlink.jpg') center/cover no-repeat;
+  
+  height: 100vh;
+  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
+    url("https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1950&q=80") center/cover no-repeat;
+  display: flex; flex-direction: column; justify-content: center; align-items: center;
+  text-align: center; padding: 0 2rem;
+
+}
+.hero h2 { font-size: 3rem; margin: 0; text-transform: uppercase; }
+.hero h2 span { color: #1e5631; }
+.tagline { font-style: italic; font-size: 1.2rem; margin-top: 0.5rem; color: #ddd; }
+
+/* SECTIONS */
+section { padding: 6rem 2rem; max-width: 1000px; margin: 0 auto; }
+h3 { text-align: center; margin-bottom: 1rem; font-size: 1.8rem; text-transform: uppercase; color: #1e5631; }
+
+/* CONTACT SECTION */
+#contact { background: #0f0f0f; text-align: center; }
+#contact p { margin: 0.5rem 0; font-size: 1rem; }
+
+/* ANIMATIONS */
+.fade-in { opacity: 0; transform: translateY(20px); transition: opacity 1s ease, transform 1s ease; }
+.fade-in.visible { opacity: 1; transform: translateY(0); }
+
+@media (max-width: 768px) {
+  header { flex-direction: column; gap: 1rem; }
+  .hero h2 { font-size: 2.2rem; }
+}
+
+/* Fix for Contact Us dropdown being cut off */
+.contact-dropdown {
+  overflow: visible !important;
+}
+.dropdown-menu {
+  right: auto !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  margin-top: 8px;
+}
+
+
+/* Ensure dropdown displays without clipping and is centered under button */
+.contact-dropdown{position:relative;overflow:visible;}
+.contact-button{background: #1E5631;color:#fff;padding:10px 18px;border:none;border-radius:4px;cursor:pointer;z-index:80}
+.dropdown-menu{position:absolute;top:calc(100% + 8px);right:0;min-width:240px;background:#fff;color:#000;padding:12px;border-radius:8px;box-shadow:0 10px 30px rgba(0,0,0,0.15);z-index:90;display:none}
+.contact-dropdown.open .dropdown-menu{display:block}
+.dropdown-menu a{color:#1E5631;text-decoration:none;font-weight:700;display:block;margin-top:6px}
+
+
+/* Fix for Contact button visibility and responsiveness */
+header, nav, .navbar, .top-bar {
+    overflow: visible !important;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+button, .contact-btn, .nav-contact {
+    flex-shrink: 0;
+    margin-right: 1rem;
+}
+
+@media (max-width: 768px) {
+    nav, .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .contact-btn, .nav-contact {
+        margin-top: 10px;
+        margin-right: 20px;
+        width: 100%;
+        text-align: center;
+    }
+}
+
+
+/* Ensure Contact button and dropdown are always visible and positioned correctly */
+.navbar, header, nav {
+    overflow: visible !important;
+}
+
+.contact-btn, .nav-contact {
+    position: relative;
+    right: auto;
+    overflow: visible !important;
+    z-index: 1000;
+}
+
+.dropdown-menu, .contact-dropdown {
+    position: absolute;
+    right: 20px;
+    transform: translateX(-10%);
+    z-index: 9999;
+    overflow: visible;
+}
+
+@media (max-width: 768px) {
+    .dropdown-menu, .contact-dropdown {
+        position: static;
+        transform: none;
+        width: 100%;
+    }
+}
+
+
+/* === Hero Overlay Tint === */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35); /* subtle dark tint */
+    z-index: 1;
+}
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+/* === Contact Us Button Glow (always active) === */
+.contact-button {
+    position: relative;
+    box-shadow: 0 0 12px rgba(0, 255, 100, 0.6);
+    animation: pulseGlow 3s ease-in-out infinite;
+}
+@keyframes pulseGlow {
+    0% { box-shadow: 0 0 8px rgba(0, 255, 100, 0.5); }
+    50% { box-shadow: 0 0 16px rgba(0, 255, 100, 0.8); }
+    100% { box-shadow: 0 0 8px rgba(0, 255, 100, 0.5); }
+}
+
+
+/* === Hero Overlay (Neutral Gray Tint, Constant) === */
+.hero::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.35);
+    z-index: 1;
+}
+.hero * {
+    position: relative;
+    z-index: 2;
+}
+
+
+/* FORCE hero background to chain-link image */
+.hero, section.hero, .hero-section { 
+  background-image: url('images/hero_chainlink.jpg') !important;
+  background-size: cover !important;
+  background-position: center center !important;
+  background-repeat: no-repeat !important;
+  opacity: 1 !important;
+}
+
+/* Ensure overlay sits above background */
+.hero::before, .hero-section::before { 
+  content: "" !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: rgba(0,0,0,0.40) !important;
+  z-index: 1 !important;
+  pointer-events: none !important;
+}
+.hero * { position: relative !important; z-index: 2 !important; }
+
+
+/* Visually balanced header fix */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 2rem;
+  padding-right: 2.3rem; /* slightly more for visual balance */
+  box-sizing: border-box;
+}
+
+.navbar .contact-btn {
+  margin-right: 0; /* ensure no extra push */
+}
+
+
+
+/* V18: Force visual balance for header so Contact button never clips.
+   High-specificity + !important to override earlier rules. */
+html body header, html body .navbar, html body .top-bar, html body .site-header, html body .header {
+  padding-left: 2rem !important;
+  padding-right: 2.3rem !important; /* slightly larger for visual balance with logo */
+  box-sizing: border-box !important;
+  overflow: visible !important;
+}
+
+/* Ensure contact button is inside the header area and not clipped */
+html body header .contact-button, html body .navbar .contact-button, html body .top-bar .contact-button, html body .site-header .contact-button {
+  position: relative !important;
+  right: auto !important;
+  margin-right: 0 !important;
+  z-index: 2000 !important;
+  box-shadow: 0 0 10px rgba(97,255,138,0.65) !important; /* subtle glow retained */
+}
+
+/* If header uses fixed positioning, allow visible overflow */
+html body header[style], html body .navbar[style] {
+  overflow: visible !important;
+}
+
+/* Fallback: ensure any element anchored to right edge has at least safe spacing */
+*[style*="right:0"], *[style*="right: 0"], *[style*="right:0px"] {
+  right: 2.3rem !important;
+}
+
