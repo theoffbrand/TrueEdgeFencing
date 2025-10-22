@@ -40,18 +40,16 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 }
 
 /* HERO */
-.hero {
-  height: 100vh;
-  background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("https://raw.githubusercontent.com/theoffbrand/TrueEdgeFencing/main/hero_chainlink.jpg")
-    center/cover no-repeat;
+hero {
+  background: url("hero_chainlink.jpg") no-repeat center center;
+  background-size: cover;
+  height: 90vh;
+  width: 100%;
   display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
-  text-align: center;
-  padding: 0 2rem;
+  justify-content: center;
+  color: white;
+  text-shadow: 0 2px 4px rgba(0,0,0,0.6);
 }
 
 .hero h2 {
