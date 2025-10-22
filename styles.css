@@ -43,9 +43,8 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 .hero {
   height: 100vh;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("https://raw.githubusercontent.com/theoffbrand/TrueEdgeFencing/main/hero_chainlink.jpg")
-    center/cover no-repeat;
+  linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+  url("./hero_chainlink.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
