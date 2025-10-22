@@ -42,9 +42,10 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 /* HERO */
 .hero {
   height: 100vh;
-  background:
-  linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-  url("hero_chainlink.jpg") center/cover no-repeat;
+  background-color: #1e5631;
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("hero_chainlink.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
