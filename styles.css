@@ -42,10 +42,9 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 /* HERO */
 .hero {
   height: 100vh;
-  background-color: #1e5631;
-  background: 
+  background:
     linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
-    url("hero_chainlink.jpg") center/cover no-repeat;
+    url("https://raw.githubusercontent.com/theoffbrand/TrueEdgeFencing/main/hero_chainlink.jpg") center/cover no-repeat;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -53,9 +52,23 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
   text-align: center;
   padding: 0 2rem;
 }
-.hero h2 { font-size: 3rem; margin: 0; text-transform: uppercase; }
-.hero h2 span { color: #1e5631; }
-.tagline { font-style: italic; font-size: 1.2rem; margin-top: 0.5rem; color: #ddd; }
+
+.hero h2 {
+  font-size: 3rem;
+  margin: 0;
+  text-transform: uppercase;
+}
+
+.hero h2 span {
+  color: #1e5631;
+}
+
+.tagline {
+  font-style: italic;
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+  color: #ddd;
+}
 
 /* SECTIONS */
 section { padding: 6rem 2rem; max-width: 1000px; margin: 0 auto; }
