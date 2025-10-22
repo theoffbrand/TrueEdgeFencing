@@ -41,7 +41,7 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 
 /* HERO */
 .hero {
-  background: url("./hero_chainlink.jpg") no-repeat center center;
+  background: url("hero_chainlink.jpg") no-repeat center center;
   background-size: cover;
   height: 90vh;
   width: 100%;
@@ -51,7 +51,6 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
   color: white;
   text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
 }
-
 .hero h2 {
   font-size: 3rem;
   margin: 0;
