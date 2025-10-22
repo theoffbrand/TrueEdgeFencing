@@ -41,14 +41,16 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 
 /* HERO */
 .hero {
-  background: url('images/hero_chainlink.jpg') center/cover no-repeat;
-  
   height: 100vh;
-  background: linear-gradient(rgba(0,0,0,0.55), rgba(0,0,0,0.55)),
-    url("https://images.unsplash.com/photo-1501183638710-841dd1904471?auto=format&fit=crop&w=1950&q=80") center/cover no-repeat;
-  display: flex; flex-direction: column; justify-content: center; align-items: center;
-  text-align: center; padding: 0 2rem;
-
+  background: 
+    linear-gradient(rgba(0, 0, 0, 0.55), rgba(0, 0, 0, 0.55)),
+    url("hero_chainlink.jpg") center/cover no-repeat;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 0 2rem;
 }
 .hero h2 { font-size: 3rem; margin: 0; text-transform: uppercase; }
 .hero h2 span { color: #1e5631; }
