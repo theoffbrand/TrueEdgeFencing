@@ -350,3 +350,24 @@ html body header[style], html body .navbar[style] {
   /* Small tweak so hero text doesn't overlap with the pinned contact button */
   .hero { padding-top: 2.5rem; }
 }
+
+.hero-logo-text {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+}
+
+.hero-logo {
+  height: 100px;
+  max-height: 8vw;
+  width: auto;
+}
+
+.hero-text-block {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: left;
+}
+
