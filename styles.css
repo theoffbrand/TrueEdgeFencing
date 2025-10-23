@@ -301,3 +301,52 @@ html body header[style], html body .navbar[style] {
     display: block;
   }
 }
+
+
+/* --- Mobile fix: prevent Contact dropdown from getting clipped --- */
+@media (max-width: 768px) {
+  /* stack header elements so the hero and button don't overlap */
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 1rem;
+    overflow: visible; /* allow dropdown to be visible */
+  }
+
+  /* center the contact button nicely */
+  .nav-right,
+  .contact-dropdown {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .contact-button {
+    position: relative;     /* keep it in flow, above the hero */
+    z-index: 1001;
+    margin: 0 auto;
+  }
+
+  /* Make the dropdown detach from header and float above content */
+  .contact-dropdown .dropdown-menu,
+  #contactMenu { /* whichever selector you use for the menu */
+    position: fixed !important;
+    top: 88px; /* distance from top — tweak if needed */
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 9999;
+    width: min(92%, 360px);
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.45);
+    border-radius: 10px;
+  }
+
+  /* If header had pointer-events or overflow rules, ensure the menu can be interacted with */
+  header, .hero, .nav-wrap { overflow: visible; pointer-events: auto; }
+
+  /* Small tweak so hero text doesn't overlap with the pinned contact button */
+  .hero { padding-top: 2.5rem; }
+}
