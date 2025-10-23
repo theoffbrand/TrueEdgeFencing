@@ -41,7 +41,7 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 
 /* HERO */
  .hero {
-  background: url("hero_chainlink.jpg") no-repeat center center;
+  background: url("https://theoffbrand.github.io/TrueEdgeFencing/hero_chainlink.jpg?v=2") no-repeat center center;
   background-size: cover;
   height: 90vh;
   width: 100%;
@@ -68,7 +68,6 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
   margin-top: 0.5rem;
   color: #ddd;
 }
-
 /* SECTIONS */
 section { padding: 6rem 2rem; max-width: 1000px; margin: 0 auto; }
 h3 { text-align: center; margin-bottom: 1rem; font-size: 1.8rem; text-transform: uppercase; color: #1e5631; }
