@@ -213,7 +213,7 @@ button, .contact-btn, .nav-contact {
 
 /* FORCE hero background to chain-link image */
 .hero, section.hero, .hero-section { 
-  background-image: url('images/hero_chainlink.jpg') !important;
+  background-image: url('hero_chainlink.jpg') !important;
   background-size: cover !important;
   background-position: center center !important;
   background-repeat: no-repeat !important;
