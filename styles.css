@@ -46,7 +46,6 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
   background-size: cover;
   background-position: center;
   height: 100vh;
-  overflow: hidden;
   width: 100%;
   display: flex;
   align-items: center;
