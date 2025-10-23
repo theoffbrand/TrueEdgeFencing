@@ -40,18 +40,18 @@ nav { display: flex; align-items: center; gap: 1.5rem; }
 }
 
 /* HERO */
- hero {
+ .hero {
   position: relative;
   background: url("hero_chainlink.jpg") no-repeat center center;
   background-size: cover;
   background-position: center;
-  height: 100vh;
-  width: 100%;
+  height: 500px; /* restore your original hero size */
   display: flex;
-  align-items: center;
   justify-content: center;
+  align-items: center;
   color: white;
-  text-shadow: 0 2px 4px rgba(0, 0, 0, 0.6);
+  text-align: center;
+  overflow: hidden;
 }
 
 .hero h2 {
@@ -200,18 +200,20 @@ button, .contact-btn, .nav-contact {
 
 /* === Hero Overlay (Neutral Gray Tint, Constant) === */
 .hero::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: rgba(0, 0, 0, 0.35);
-    z-index: 1;
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.55); /* adjust tint darkness here */
+  z-index: 1;
 }
-.hero * {
-    position: relative;
-    z-index: 2;
+
+/* keeps hero text above the tint */
+.hero-content {
+  position: relative;
+  z-index: 2;
 }
 
 
