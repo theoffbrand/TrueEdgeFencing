@@ -359,10 +359,12 @@ html body header[style], html body .navbar[style] {
   gap: 20px;
 }
 
+/* Larger logo sizing */
 .hero-logo {
-  height: 130px;     /* up from 100px */
-  max-height: 10vw;  /* scales better on large screens */
+  height: 170px;     /* was 130px */
+  max-height: 12vw;  /* scales smoothly on very wide screens */
   width: auto;
+  margin-right: 10px; /* keeps slight spacing before text */
 }
 
 .hero-text-block {
@@ -374,8 +376,9 @@ html body header[style], html body .navbar[style] {
 
 @media (max-width: 600px) {
   .hero-logo {
-    height: 85px;    /* up from 60px */
+    height: 110px;    /* was 85px */
     max-height: none;
+    margin-bottom: 10px; /* extra breathing room when stacked */
   }
 
   .hero-logo-text {
