@@ -360,8 +360,8 @@ html body header[style], html body .navbar[style] {
 }
 
 .hero-logo {
-  height: 100px;
-  max-height: 8vw;
+  height: 130px;     /* up from 100px */
+  max-height: 10vw;  /* scales better on large screens */
   width: auto;
 }
 
@@ -374,9 +374,10 @@ html body header[style], html body .navbar[style] {
 
 @media (max-width: 600px) {
   .hero-logo {
-    height: 60px;
+    height: 85px;    /* up from 60px */
     max-height: none;
   }
+
   .hero-logo-text {
     gap: 12px;
     flex-direction: column;
