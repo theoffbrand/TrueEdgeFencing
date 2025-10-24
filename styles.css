@@ -361,7 +361,7 @@ html body header[style], html body .navbar[style] {
 
 /* Larger logo sizing */
 .hero-logo {
-  height: 170px;     /* was 130px */
+  height: 200px;     /* was 130px */
   max-height: 12vw;  /* scales smoothly on very wide screens */
   width: auto;
   margin-right: 10px; /* keeps slight spacing before text */
@@ -376,7 +376,7 @@ html body header[style], html body .navbar[style] {
 
 @media (max-width: 600px) {
   .hero-logo {
-    height: 110px;    /* was 85px */
+    height: 150px;    /* was 85px */
     max-height: none;
     margin-bottom: 10px; /* extra breathing room when stacked */
   }
